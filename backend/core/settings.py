@@ -55,7 +55,7 @@ ALLOWED_HOSTS = ['*']
 # ]
 INSTALLED_APPS = [
     'jazzmin',
-
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -65,7 +65,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework_simplejwt',
-    'corsheaders',
+    # 'corsheaders',
 
     # Explicit AppConfig paths
     'apps.authentication.apps.AuthenticationConfig',
@@ -195,6 +195,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 # Media files setup for issue photos & avatars
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+CORS_ALLOW_ALL_ORIGINS = True  # Easiest for development/testing
 
 # Jazzmin Theme & Branding Configuration
 JAZZMIN_SETTINGS = {
